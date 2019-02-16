@@ -1,4 +1,4 @@
-# Spring boot 
+# Spring boot
 - 스프링 부트란?
 	1. 제품 수준의 어플리케이션을 쉽게 만들수 있다.
 	2. 서드파티, 스프링 설정등을 최선의 설정들로 자동 설정 해주어 빠르게 적용할 수 있게 해준다. ex) 톰캣 설정
@@ -12,8 +12,8 @@
 # getting-Started
 
 1. 프로젝트 생성
-2. pom.xml 파일에 코드 추가 
- 
+2. pom.xml 파일에 코드 추가
+
 ~~~
     <!-- Inherit defaults from Spring Boot 의존성 관리 (부모 프로젝트 설정)-->
     <parent>
@@ -21,7 +21,7 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.2.RELEASE</version>
     </parent>
-    
+
         <!-- Add typical dependencies for a web application -->
     <dependencies>
         <dependency>
@@ -29,7 +29,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
-    
+
         <!-- Package as an executable jar -->
     <build>
         <plugins>
@@ -42,5 +42,16 @@
 
 ~~~
 
+# 의존성 관리
+* pom.xml에 정의한 parent를 따라가면 dependency management가 정의되어 있음.
+*  dependency management 에 정의되어있는 라이브러리를 사용할 경우 버전을 명시하지 않아도 디폴트 버전으로 관리됨 (버전 명시할 경우 디폴트여도 해당 버전을 가져옴)
+*  관리되지 않는 라이브러리를 사용할때는 꼭 버전을 명시해야한다!!
+*  스프링부트가 관리하는 의존성 버전을 바꾸고 싶을 때
+ex) properties 추가 후 버전 명시 (spring boot 버전 변경)
 
-	
+~~~
+    <properties>
+        <spring.version>5.1.3.RELEASE</spring.version>
+    </properties>
+
+~~~
