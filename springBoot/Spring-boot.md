@@ -73,5 +73,4 @@ ex) properties 추가 후 버전 명시 (spring boot 버전 변경)
  3. @ConfigurationProperties("prefix")
   - @EnableConfigurationProperties(~Properties.class)
 
-
 ![spring.factories](./assets/Spring-boot-f2b59c08.png)
