@@ -47,7 +47,7 @@
 *  dependency management 에 정의되어있는 라이브러리를 사용할 경우 버전을 명시하지 않아도 디폴트 버전으로 관리됨 (버전 명시할 경우 디폴트여도 해당 버전을 가져옴)
 *  관리되지 않는 라이브러리를 사용할때는 꼭 버전을 명시해야한다!!
 *  스프링부트가 관리하는 의존성 버전을 바꾸고 싶을 때
-ex) properties 추가 후 버전 명시 (spring boot 버전 변경)
+ex) properties 추가 후 버전 명시 (spring boot 버전 변경)  
 
 ~~~
     <properties>
@@ -55,3 +55,22 @@ ex) properties 추가 후 버전 명시 (spring boot 버전 변경)
     </properties>
 
 ~~~
+
+# EnableAutoConfigure
+
+* @SpringBootApplication
+ = @SpringBootConfiguration +
+   @ComponentScan (빈 첫번째 등록) +
+	 @EnableAutoConfiguration (자동설정 빈 등록)
+
+* @SpringBootApplication 이 하는 일
+ 1.  @ComponentScan (해당 클래스부터 하위클래스까지 검색)
+ = Component라는 어노테이션을 가진 클래스들을 찾아서 빈으로 등록
+ 2. @EnableAutoConfiguration
+  - spring-boot-autoconfigure 에 있는 설정들(/META-INF/spring.factories)을 가지고 와서 bean으로 등록!
+  - 조건에 따라 bean 등록 (@ConditionalOn~ )
+	ex) @ConditionalOnMissingBean = 빈이 존재하면 등록 X
+ 3. @ConfigurationProperties("prefix")
+  - @EnableConfigurationProperties(~Properties.class)
+
+![spring.factories 복사](assets/Spring boot -f2b59c08.png)
