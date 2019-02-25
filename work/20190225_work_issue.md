@@ -36,3 +36,28 @@
     
     	}
 ~~~    	
+
+
+* HTTP 상태코드 정리
+	* 참조링크 
+	  * <https://item4.github.io/2018-02-08/Basic-HTTP-Status-Codes/>
+	* 더 알아보기 
+	  * <https://httpstatuses.com/>
+	  * <http://www.restapitutorial.com/httpstatuscodes.html/>
+ 
+| code  |  설명                              |   
+|-------|-----------------------------------|                             
+| 500   | 서버 내부 에러(Internal Server Error) |  
+| 503   | 서비스 지원 불가 (Service Unavailable)  |  
+| 400   | 요청 에러 (Bad Request)  |  
+| 405   | 잘못된 Method 요청 (Method Not Allowed)  |   
+| 404   | 리소스 없음 (404 Not Found)  |  
+| 403   | 권한 없음 (Forbidden)  |  
+| 429   | 요청이 너무 많음 (Too Many Requests)  |  
+| 301   | 접속 주소 이동 (Move Permanently)  |  
+| 304   | 바뀐거 없음 (Not Modified)  |  
+| 302   | 임시 이전 (Found)  |  
+| 200   | 요청 문제 없음 (OK)  | 
+| 302   | 요청의 결과 새로운 리소스 생성(바로) (Created)  |    
+
+ 
