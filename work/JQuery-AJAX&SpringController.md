@@ -27,7 +27,7 @@ $.ajax({
 });
 ~~~
 
-#Spring Controller
+# Spring Controller
 * 다양한 데이터 형식으로 응답하기 위해 메세지 컨버터라는 것을 지원한다.
 * 스프링 3 이상부터 jackson 라이브러리를 의존성으로 추가할 경우 자동적으로 MappingJacksonHttpMessageConverter를 적용해준다.
 
